@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sarvesh Tiwari - Computer Science Educator and Technology Enthusiast."
+    />
+    <title>About Me | SARVESHTWR</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --navy: #101827;
+        --blue: #2563eb;
+        --light-blue: #eff6ff;
+        --text: #64748b;
+        --border: #e5eaf1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", sans-serif;
+        color: var(--navy);
+        background: #fff;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      /* ABOUT HEADER — MATCHES HOMEPAGE */
+      .about-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: #ffffffed;
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid #e9edf3;
+      }
+
+      .about-header .nav-wrap {
+        width: min(1240px, calc(100% - 48px));
+        height: 78px;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .about-header .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        color: inherit;
+      }
+
+      .brand-logo {
+        width: 43px;
+        height: 43px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #2563eb, #173c9c);
+        color: #fff;
+        font:
+          800 24px Manrope,
+          sans-serif;
+      }
+
+      .about-header .brand b {
+        display: block;
+        font:
+          800 17px Manrope,
+          sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      .about-header .brand small {
+        display: block;
+        margin-top: 2px;
+        color: #8490a3;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+      }
+
+      .about-header .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        color: #64748b;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .about-header .nav-links a {
+        color: #64748b;
+        transition: color 0.2s;
+      }
+
+      .about-header .nav-links a:hover,
+      .about-header .nav-links a.active {
+        color: var(--blue);
+      }
+
+      .about-header .nav-links .admin-link {
+        border-radius: 11px;
+        background: var(--navy);
+        padding: 12px 17px;
+        color: white;
+      }
+
+      .menu-btn {
+        display: none;
+        border: 1px solid var(--border);
+        background: white;
+        border-radius: 10px;
+        padding: 9px 12px;
+        font-size: 19px;
+        cursor: pointer;
+      }
+
+      /* HERO */
+      .about-page .hero {
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 78% 36%, #dceaff 0, transparent 31%),
+          linear-gradient(120deg, #f8fbff, #f0f5ff 62%, #fbfcff);
+      }
+
+      .about-page .hero-inner {
+        width: min(1160px, calc(100% - 48px));
+        min-height: 600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 42px;
+        padding: 80px 0;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        border: 1px solid #d7e5ff;
+        border-radius: 99px;
+        background: #ffffffb8;
+        padding: 9px 13px;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+      }
+
+      .eyebrow span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #16a36a;
+        display: inline-block;
+      }
+
+      .about-page .hero h1 {
+        margin: 24px 0 17px;
+        font:
+          800 clamp(45px, 6vw, 72px)/1.07 Manrope,
+          sans-serif;
+        letter-spacing: -0.065em;
+        color: var(--navy);
+      }
+
+      .about-page .hero h1 span {
+        background: linear-gradient(90deg, #2563eb, #08a5c7);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .hero-role {
+        margin: 0 0 18px;
+        color: #334e75;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .about-page .hero-description {
+        max-width: 540px;
+        color: #64748b;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .about-page .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        border: 0;
+        border-radius: 12px;
+        padding: 13px 18px;
+        font-size: 13px;
+        font-weight: 800;
+        transition: 0.2s;
+      }
+
+      .about-page .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .about-page .btn-primary {
+        background: var(--blue);
+        color: white;
+        box-shadow: 0 9px 20px #2563eb27;
+      }
+
+      .about-page .btn-primary:hover {
+        background: #1d4ed8;
+      }
+
+      .about-page .btn-light {
+        background: #fff;
+        border: 1px solid #dce3ec;
+        color: #334155;
+      }
+
+      .hero-image-wrap {
+        position: relative;
+        width: min(365px, 90%);
+        margin: auto;
+      }
+
+      .hero-image {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        object-position: center top;
+        border: 7px solid white;
+        border-radius: 20px;
+        background: #dceaff;
+        box-shadow: 0 25px 65px rgba(25, 54, 105, 0.18);
+      }
+
+      .image-decoration {
+        position: absolute;
+        inset: 18px -18px -18px 18px;
+        border: 2px solid #8bb8ff;
+        border-radius: 20px;
+      }
+
+      .photo-caption {
+        position: absolute;
+        z-index: 3;
+        bottom: 22px;
+        left: -30px;
+        padding: 13px 18px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 10px 30px #1e3a8a20;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .photo-caption small {
+        display: block;
+        margin-top: 4px;
+        color: #71809a;
+        font-weight: 500;
+      }
+
+      /* SHARED SECTION STYLING */
+      .about-page .section {
+        display: block !important;
+        width: 100%;
+        max-width: 1080px;
+        margin: auto;
+        padding: 88px 24px;
+      }
+
+      .about-page .section-heading {
+        display: block !important;
+        width: 100%;
+        margin: 0 0 34px !important;
+        text-align: left !important;
+      }
+
+      .about-page .section-heading .section-label {
+        display: block !important;
+        margin: 0 0 10px !important;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .about-page .section-heading h2 {
+        display: block !important;
+        margin: 10px 0 9px !important;
+        color: var(--navy);
+        font:
+          800 clamp(28px, 3.5vw, 39px)/1.2 Manrope,
+          sans-serif;
+        letter-spacing: -0.045em;
+        text-align: left;
+      }
+
+      .about-page .section-heading p {
+        display: block !important;
+        max-width: 650px;
+        margin: 0 !important;
+        color: #748197;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .about-text {
+        max-width: 850px;
+        margin: 0;
+        color: #64748b;
+        font-size: 15px;
+        line-height: 2;
+      }
+
+      .soft-section {
+        background: #f7f9fc;
+        border-block: 1px solid #edf1f6;
+      }
+
+      /* EDUCATION */
+      .timeline {
+        display: grid !important;
+        gap: 23px;
+        margin-left: 9px;
+        padding-left: 28px;
+        border-left: 2px solid #dbeafe;
+      }
+
+      .timeline-card {
+        position: relative;
+        padding: 22px 24px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        background: white;
+        transition: 0.25s;
+      }
+
+      .timeline-card:hover {
+        transform: translateX(5px);
+        box-shadow: 0 12px 30px #1e3a8a0c;
+      }
+
+      .timeline-card::before {
+        content: "";
+        position: absolute;
+        top: 26px;
+        left: -37px;
+        width: 14px;
+        height: 14px;
+        border: 3px solid white;
+        border-radius: 50%;
+        background: var(--blue);
+        box-shadow: 0 0 0 2px #bfdbfe;
+      }
+
+      .timeline-card h3 {
+        margin: 0 0 7px;
+        color: var(--navy);
+        font:
+          700 16px Manrope,
+          sans-serif;
+      }
+
+      .timeline-card p {
+        margin: 0;
+        color: #64748b;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      /* EXPERIENCE */
+      .experience-card {
+        display: flex !important;
+        width: 100%;
+        min-height: 125px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 28px;
+        border-radius: 16px;
+        background: linear-gradient(120deg, #14264b, #1d4388);
+        color: white;
+      }
+
+      .experience-card h3 {
+        margin: 0 0 9px;
+        color: white;
+        font:
+          800 21px Manrope,
+          sans-serif;
+      }
+
+      .experience-card p {
+        margin: 0;
+        color: #d5e2ff;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .experience-tag {
+        padding: 11px 17px;
+        border: 1px solid #ffffff30;
+        border-radius: 30px;
+        background: #ffffff18;
+        color: white;
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      /* SKILLS */
+      .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 13px;
+      }
+
+      .skill {
+        padding: 19px 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: white;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.2s;
+      }
+
+      .skill:hover {
+        transform: translateY(-4px);
+        border-color: #93baff;
+        color: var(--blue);
+        box-shadow: 0 10px 25px #2563eb10;
+      }
+
+      .skill-icon {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 24px;
+      }
+
+      /* PROJECTS */
+      .project-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .project-card {
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: white;
+        transition: 0.25s;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px #1e3a8a12;
+      }
+
+      .project-icon {
+        display: grid;
+        width: 45px;
+        height: 45px;
+        place-items: center;
+        margin-bottom: 17px;
+        border-radius: 12px;
+        background: var(--light-blue);
+        color: var(--blue);
+        font-size: 22px;
+      }
+
+      .project-card h3 {
+        margin: 0 0 9px;
+        color: var(--navy);
+        font:
+          700 16px Manrope,
+          sans-serif;
+      }
+
+      .project-card p {
+        margin: 0;
+        color: #64748b;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      /* CONTACT */
+      .contact-section {
+        max-width: 1080px;
+        margin: 0 auto 65px;
+        padding: 0 24px;
+      }
+
+      .contact-box {
+        padding: 38px 25px;
+        border: 1px solid #dce9ff;
+        border-radius: 18px;
+        background: linear-gradient(120deg, #eff6ff, #e5efff);
+        text-align: center;
+      }
+
+      .contact-box h2 {
+        margin: 0 0 10px;
+        color: var(--navy);
+        font:
+          800 27px Manrope,
+          sans-serif;
+      }
+
+      .contact-box p {
+        margin: 0 0 23px;
+        color: #536078;
+        font-size: 14px;
+      }
+
+      /* FOOTER */
+      .about-footer {
+        padding: 27px 20px;
+        background: #101827;
+        color: #a5b2c4;
+        text-align: center;
+        font-size: 12px;
+      }
+
+      .about-footer strong {
+        color: white;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .about-page .hero-inner {
+          grid-template-columns: 1fr 0.8fr;
+          gap: 15px;
+        }
+
+        .about-page .hero h1 {
+          font-size: clamp(43px, 6vw, 60px);
+        }
+      }
+
+      @media (max-width: 650px) {
+        .about-header .nav-wrap {
+          width: calc(100% - 34px);
+          height: 68px;
+        }
+
+        .about-header .brand b {
+          font-size: 15px;
+        }
+        .about-header .brand small {
+          font-size: 8px;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+
+        .about-header .nav-links {
+          display: none;
+          position: absolute;
+          top: 68px;
+          left: 0;
+          right: 0;
+          padding: 17px;
+          border-bottom: 1px solid var(--border);
+          background: white;
+          box-shadow: 0 12px 18px #0f172a0a;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+
+        .about-header .nav-links.open {
+          display: flex !important;
+        }
+
+        .about-header .nav-links a {
+          padding: 13px 10px;
+        }
+
+        .about-header .nav-links .admin-link {
+          margin-top: 8px;
+          text-align: center;
+        }
+
+        .about-page .hero-inner {
+          width: calc(100% - 34px);
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 35px;
+          padding: 58px 0 45px;
+        }
+
+        .about-page .hero h1 {
+          font-size: clamp(43px, 12vw, 60px);
+        }
+
+        .about-page .hero-description {
+          font-size: 14px;
+        }
+
+        .hero-image-wrap {
+          width: min(310px, 88%);
+        }
+        .hero-image {
+          height: 360px;
+        }
+        .photo-caption {
+          left: -10px;
+        }
+
+        .about-page .section {
+          padding: 62px 22px;
+        }
+
+        .about-page .section-heading h2 {
+          font-size: 29px;
+        }
+
+        .skills-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .experience-card {
+          align-items: flex-start;
+        }
+
+        .contact-section {
+          padding: 0 22px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="about-page">
+    <!-- HEADER -->
+    <header class="about-header">
+      <div class="nav-wrap">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">S</span>
+          <span>
+            <b>SARVESHTWR</b>
+            <small>STUDENT LEARNING PORTAL</small>
+          </span>
+        </a>
+
+        <button class="menu-btn" id="menuToggle" aria-label="Open navigation">
+          ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="index.html#classes">Classes</a>
+          <a href="index.html#library">Study Library</a>
+          <a href="about.html" class="active">About</a>
+          <a href="admin.html" class="admin-link">Admin Login ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> ABOUT ME</div>
+
+          <h1>Hello, I'm<br /><span>Sarvesh Tiwari.</span></h1>
+
+          <div class="hero-role">
+            Computer Science Educator &amp; Technology Enthusiast
+          </div>
+
+          <p class="hero-description">
+            I am passionate about teaching, technology and creating meaningful
+            digital learning experiences. My goal is to make computer science
+            easier to understand, practical to learn and interesting to explore.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn-primary">My Experience ↗</a>
+            <a href="#education" class="btn btn-light">My Education</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="image-decoration"></div>
+
+          <img
+            src="assets/sarvesh.jpg"
+            alt="Sarvesh Tiwari"
+            class="hero-image"
+            onerror="
+              this.style.display = 'none';
+              document.getElementById('photoFallback').style.display = 'grid';
+            "
+          />
+
+          <div
+            id="photoFallback"
+            style="
+              display: none;
+              width: 100%;
+              height: 420px;
+              background: #dceaff;
+              border-radius: 20px;
+              place-items: center;
+              font-size: 70px;
+              color: #2563eb;
+            "
+          >
+            ST
+          </div>
+
+          <div class="photo-caption">
+            Sarvesh Tiwari
+            <small>Computer Science Educator</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section">
+      <div class="section-heading">
+        <span class="section-label">A LITTLE INTRODUCTION</span>
+        <h2>Teaching with purpose. Learning with passion.</h2>
+      </div>
+
+      <p class="about-text">
+        I believe education becomes more powerful when concepts are connected
+        with real-world applications. As a Computer Science educator, I focus on
+        building strong fundamentals, encouraging logical thinking and helping
+        students develop confidence in technology.
+        <br /><br />
+        Beyond the classroom, I enjoy exploring web technologies, developing
+        digital tools and finding creative ways to improve the learning
+        experience.
+      </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <div class="soft-section">
+      <section class="section" id="education">
+        <div class="section-heading">
+          <span class="section-label">ACADEMIC BACKGROUND</span>
+          <h2>Education</h2>
+          <p>A foundation in computer science, mathematics and technology.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-card">
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>
+              Dr. Shakuntala Misra National Rehabilitation University, Lucknow
+            </p>
+          </div>
+
+          <div class="timeline-card">
+            <h3>Bachelor of Science (B.Sc.)</h3>
+            <p>Physics, Mathematics and Computer Science</p>
+            <p>U.P. Rajarshi Tandon Open University, Prayagraj</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <span class="section-label">PROFESSIONAL JOURNEY</span>
+        <h2>Teaching Experience</h2>
+        <p>
+          Combining subject knowledge with practical and student-focused
+          teaching.
+        </p>
+      </div>
+
+      <div class="experience-card">
+        <div>
+          <h3>PGT – Computer Science</h3>
+          <p>GM Academy, Barhaj</p>
+          <p>
+            Teaching, mentoring and developing students' understanding of
+            computer science.
+          </p>
+        </div>
+        <div class="experience-tag">Computer Science Educator</div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <div class="soft-section">
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <span class="section-label">TECHNICAL EXPERTISE</span>
+          <h2>Technologies I Work With</h2>
+          <p>
+            Tools and technologies I use for learning, teaching and development.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill"><span class="skill-icon">🐍</span>Python</div>
+          <div class="skill">
+            <span class="skill-icon">💻</span>C Programming
+          </div>
+          <div class="skill"><span class="skill-icon">☕</span>JavaScript</div>
+          <div class="skill">
+            <span class="skill-icon">🌐</span>HTML &amp; CSS
+          </div>
+          <div class="skill"><span class="skill-icon">⚛️</span>React</div>
+          <div class="skill"><span class="skill-icon">🟢</span>Node.js</div>
+          <div class="skill"><span class="skill-icon">🗄️</span>MySQL</div>
+          <div class="skill"><span class="skill-icon">🍃</span>MongoDB</div>
+          <div class="skill"><span class="skill-icon">🔧</span>Express.js</div>
+          <div class="skill"><span class="skill-icon">📂</span>GitHub</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <span class="section-label">BEYOND THE CLASSROOM</span>
+        <h2>Interests &amp; Projects</h2>
+        <p>Exploring ideas and building useful digital experiences.</p>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-icon">🎓</div>
+          <h3>Digital Learning Solutions</h3>
+          <p>
+            Creating digital learning resources and educational tools that make
+            teaching and learning more accessible.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">💡</div>
+          <h3>Web Development</h3>
+          <p>
+            Exploring modern web technologies and developing practical
+            applications with a focus on usability and simplicity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+      <div class="contact-box">
+        <h2>Let's Connect.</h2>
+        <p>
+          Interested in education, computer science or technology? Let's connect
+          and share ideas.
+        </p>
+        <a href="mailto:mr.sarveshtiwari@gmail.com" class="btn btn-primary">
+          Get in Touch ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="about-footer">
+      <strong>SARVESHTWR</strong> · Student Learning Portal <br /><br />
+      © <span id="year"></span> Sarvesh Tiwari. All rights reserved.
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+        });
+      });
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
