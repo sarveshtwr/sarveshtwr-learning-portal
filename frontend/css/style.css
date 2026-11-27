@@ -2577,3 +2577,238 @@ body.image-viewer-open #readingProgress {
     top: 70px;
   }
 }
+/* ==========================================
+   SARVESHTWR CHAPTER CARDS
+   CLEAN PREMIUM LIBRARY DESIGN
+========================================== */
+
+.chapter-grid {
+  align-items: stretch;
+  gap: 22px;
+}
+
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.chapter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 32px rgba(15, 23, 42, 0.09);
+  border-color: #bfdbfe;
+}
+
+.chapter-cover {
+  height: 135px;
+  overflow: hidden;
+  background: linear-gradient(120deg, #dbeafe, #eff6ff);
+}
+
+.chapter-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.chapter-card:hover .chapter-cover img {
+  transform: scale(1.04);
+}
+
+.chapter-art {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+}
+
+.chapter-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 19px;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.chapter-card h3 {
+  margin: 10px 0 7px;
+  color: #14213a;
+  font:
+    800 18px/1.35 Manrope,
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.chapter-card p {
+  min-height: 0;
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #e9eef5;
+  color: #334155;
+  font-size: 12px;
+}
+
+/* Lesson / Unit Label */
+.card-bottom > span {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 30px;
+  padding: 6px 11px;
+  border: 1px solid #bfd5ff;
+  border-radius: 8px;
+  background: #edf4ff;
+  color: #1749a8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  line-height: 1.2;
+}
+
+.card-bottom a {
+  flex-shrink: 0;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Bookmark Button */
+.library-bookmark-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 42px;
+  margin-top: 13px;
+  padding: 9px 13px;
+  border: 1px solid #cbd8e8;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #263b5b;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.18s ease;
+}
+
+.library-bookmark-btn:hover {
+  border-color: #8db3f5;
+  background: #f4f8ff;
+  color: #1d4ed8;
+}
+
+.library-bookmark-btn.bookmarked {
+  border-color: #b7d0ff;
+  background: #edf4ff;
+  color: #1749a8;
+}
+
+/* Large Screens / Smart Board */
+@media (min-width: 1500px) {
+  .chapter-grid {
+    gap: 26px;
+  }
+
+  .chapter-cover {
+    height: 150px;
+  }
+
+  .chapter-card-body {
+    padding: 24px;
+  }
+
+  .chapter-card h3 {
+    font-size: 22px;
+  }
+
+  .chapter-card p {
+    font-size: 15px;
+  }
+
+  .card-bottom > span {
+    min-height: 36px;
+    padding: 8px 13px;
+    font-size: 14px;
+  }
+
+  .card-bottom a,
+  .library-bookmark-btn {
+    font-size: 14px;
+  }
+
+  .library-bookmark-btn {
+    min-height: 48px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .chapter-grid {
+    gap: 16px;
+  }
+
+  .chapter-card-body {
+    padding: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .chapter-cover {
+    height: 125px;
+  }
+
+  .chapter-card-body {
+    padding: 16px;
+  }
+
+  .chapter-card h3 {
+    font-size: 17px;
+  }
+
+  .card-bottom > span {
+    min-height: 32px;
+    font-size: 12px;
+  }
+
+  .card-bottom a {
+    font-size: 12px;
+  }
+
+  .library-bookmark-btn {
+    min-height: 43px;
+  }
+}
