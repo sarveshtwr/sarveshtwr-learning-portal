@@ -119,96 +119,6 @@ function card(c) {
 }
 
 // =========================================
-// RECENTLY VIEWED CHAPTERS
-// =========================================
-
-function renderRecentlyViewed() {
-  const key = "sarveshtwr_recent_chapters";
-
-  let recent = [];
-
-  try {
-    recent = JSON.parse(localStorage.getItem(key) || "[]");
-  } catch {
-    recent = [];
-  }
-
-  let section = document.getElementById("recentlyViewedSection");
-
-  if (!section) {
-    section = document.createElement("section");
-    section.id = "recentlyViewedSection";
-    section.className = "recently-viewed-section";
-
-    grid.parentElement.insertBefore(section, grid);
-  }
-
-  if (!recent.length) {
-    section.innerHTML = "";
-    return;
-  }
-
-  const validRecent = recent
-    .filter((item) => chapters.some((c) => c.slug === item.slug))
-    .slice(0, 10);
-
-  if (!validRecent.length) {
-    section.innerHTML = "";
-    return;
-  }
-
-  section.innerHTML = `
-    <div class="recently-viewed-heading">
-      <div>
-        <h2>Recently Viewed</h2>
-        <p>Continue where you left off</p>
-      </div>
-
-      <button type="button" id="clearRecentChapters">
-        Clear History
-      </button>
-    </div>
-
-    <div class="recently-viewed-list">
-      ${validRecent
-        .map((item) => {
-          const chapter = chapters.find((c) => c.slug === item.slug);
-
-          return `
-          <a class="recently-viewed-item"
-             href="chapter.html?slug=${encodeURIComponent(item.slug)}">
-
-            <span class="recently-viewed-icon">📖</span>
-
-            <span class="recently-viewed-info">
-              <b>${esc(chapter.title)}</b>
-              <small>
-                Class ${esc(chapter.className)} ·
-                ${esc(chapter.subject)}
-              </small>
-            </span>
-
-            <span class="recently-viewed-arrow">→</span>
-
-          </a>
-        `;
-        })
-        .join("")}
-    </div>
-  `;
-
-  document
-    .getElementById("clearRecentChapters")
-    .addEventListener("click", () => {
-      if (!confirm("Clear your recently viewed history?")) return;
-
-      localStorage.removeItem(key);
-      renderRecentlyViewed();
-      toast("Reading history cleared");
-    });
-}
-
-// =========================================
 // BOOKMARK SECTION UI
 // =========================================
 
@@ -364,7 +274,6 @@ async function load() {
         .map((s) => `<option value="${esc(s)}">${esc(s)}</option>`)
         .join("");
 
-    renderRecentlyViewed();
     createBookmarkSection();
     render();
   } catch (e) {
