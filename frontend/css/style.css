@@ -2812,3 +2812,12 @@ body.image-viewer-open #readingProgress {
     min-height: 43px;
   }
 }
+
+
+/* Unified student portal navigation */
+.nav-links a.active:not(.admin-link) {
+  color: var(--blue);
+}
+.nav-links a:not(.admin-link) {
+  text-decoration: none;
+}

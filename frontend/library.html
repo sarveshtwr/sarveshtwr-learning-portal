@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Search class-wise notes, subjects and chapters in the SARVESHTWR Student Learning Portal.">
+  <title>Study Library — SARVESHTWR</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/library.css">
+</head>
+<body class="library-page">
+<header class="site-header">
+  <nav class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="42" height="42">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#classes">Classes</a>
+      <a href="library.html" class="active">Study Library</a>
+      <a href="html-lab.html">HTML Practice Lab</a>
+      <a href="python-lab.html">Python Practice Lab</a>
+      <a href="about.html">About</a>
+      <a class="admin-link" href="admin.html">Admin Login ↗</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="library-hero">
+    <div class="library-container">
+      <span class="section-kicker">YOUR LEARNING SPACE</span>
+      <h1>Study <span>Library.</span></h1>
+      <p>Find class-wise notes, subjects and chapters. Search what you need and continue learning.</p>
+      <div class="library-hero-stats">
+        <span>✓ Class-wise resources</span><span>✓ Quick chapter search</span><span>✓ Save your favourites</span>
+      </div>
+    </div>
+  </section>
+  <section class="library-container library-main">
+    <div class="library-heading-row">
+      <div><span class="section-kicker">EXPLORE RESOURCES</span><h2>Find your study material</h2><p>Search by chapter title, topic, subject or description. Use filters to narrow your results.</p></div>
+      <span class="library-live"><i></i> Live library</span>
+    </div>
+    <div class="library-search-panel">
+      <label class="library-searchbox" for="searchInput">
+        <span aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search chapters, topics, subjects…" autocomplete="off" aria-label="Search study material">
+        <button type="button" id="clearSearch" aria-label="Clear search" title="Clear search">×</button>
+      </label>
+      <div class="library-filters">
+        <label><span>CLASS</span><select id="classFilter"><option value="">All classes</option><option value="9">Class 9</option><option value="10">Class 10</option><option value="11">Class 11</option><option value="12">Class 12</option></select></label>
+        <label><span>SUBJECT</span><select id="subjectFilter"><option value="">All subjects</option></select></label>
+        <label><span>SORT BY</span><select id="sortFilter"><option value="default">Recommended</option><option value="title">Title A–Z</option><option value="class">Class order</option><option value="subject">Subject A–Z</option></select></label>
+        <button type="button" id="resetFilters" class="reset-filters">Reset filters</button>
+      </div>
+      <div class="library-search-meta"><span id="resultCount" aria-live="polite">Loading study material…</span><span id="searchHint">Tip: Press / to search</span></div>
+    </div>
+
+    <section class="bookmark-library" id="bookmarkLibrary">
+      <div class="bookmark-library-heading"><div><h2>My Bookmarks</h2><p>Your saved study chapters on this device</p></div><span id="bookmarkCount" class="bookmark-count">0</span></div>
+      <div class="bookmark-library-actions">
+        <button type="button" id="showAllChapters" class="active">All Chapters</button>
+        <button type="button" id="showBookmarkedChapters">★ My Bookmarks</button>
+      </div>
+    </section>
+    <div id="chapterGrid" class="chapter-grid"><div class="empty-state">Loading study material…</div></div>
+    <div id="loadMoreWrap" class="load-more-wrap" hidden><button type="button" id="loadMoreBtn">Load more chapters</button></div>
+    <div class="library-bottom-note">Keep learning, keep growing. <a href="index.html#classes">Explore classes →</a></div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner">
+  <a class="brand footer-brand" href="index.html"><img src="assets/logo.svg" alt="" width="36" height="36"><span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span></a>
+  <p>© <span id="year"></span> SARVESHTWR.IN · Learn something every day.</p>
+</div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="js/config.js"></script>
+<script src="js/library.js"></script>
+</body></html>

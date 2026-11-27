@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Practise Python programming online with SARVESHTWR Python Practice Lab.">
+  <title>Python Practice Lab — SARVESHTWR</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/python-lab.css">
+</head>
+<body class="python-lab-page">
+<header class="site-header">
+  <nav class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="42" height="42">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#classes">Classes</a>
+      <a href="library.html">Study Library</a>
+      <a href="html-lab.html">HTML Practice Lab</a>
+      <a href="python-lab.html" class="active">Python Practice Lab</a>
+      <a href="about.html">About</a>
+      <a class="admin-link" href="admin.html">Admin Login ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main class="python-main">
+  <section class="python-hero">
+    <div class="python-container">
+      <span class="python-kicker">LEARN BY DOING · PYTHON PROGRAMMING</span>
+      <div class="python-hero-row">
+        <div>
+          <h1>Python Practice <span>Lab.</span></h1>
+          <p>Write Python programs, run them in your browser and practise programming step by step — no installation required.</p>
+          <div class="python-pills"><span>● Browser-based Python</span><span>● Interactive Input</span><span>● Download Snapshots</span></div>
+        </div>
+        <div class="python-logo-mark" aria-hidden="true"><span>Py</span><b>Python</b><small>CODE · RUN · LEARN</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="python-container python-workspace">
+    <div class="python-reminder" role="note">
+      <div class="python-reminder-number">01</div>
+      <div class="python-reminder-copy">
+        <div>ONE QUICK STEP BEFORE YOU START</div>
+        <strong>New practical? Start with a <span>clean workspace.</span></strong>
+        <p>Click <b>Clear All</b> first to remove your previous Python program and output.</p>
+      </div>
+      <button class="python-clear-reminder" id="reminderClearBtn" type="button">↻ Clear All</button>
+    </div>
+
+    <div class="python-toolbar">
+      <div class="python-workspace-title"><i></i><span><b>Python Workspace</b><small id="runtimeStatus">Python runtime is not loaded yet</small></span></div>
+      <div class="python-actions">
+        <button class="py-btn py-btn-light" id="examplesBtn" type="button">▤ Examples</button>
+        <button class="py-btn py-btn-light" id="resetBtn" type="button">↺ Reset Example</button>
+        <button class="py-btn py-btn-light" id="clearBtn" type="button">Clear All</button>
+        <button class="py-btn py-btn-primary" id="runBtn" type="button" disabled>▶ Run Python</button>
+      </div>
+    </div>
+
+    <div class="python-grid">
+      <section class="python-panel editor-panel">
+        <div class="python-panel-heading">
+          <div><span class="python-panel-icon">&lt;/&gt;</span><span><b>Python Code Editor</b><small>Write your Python program here</small></span></div>
+          <span class="python-tag">main.py</span>
+        </div>
+        <div class="python-editor-meta"><span><i class="editor-live-dot"></i> PYTHON 3</span><span id="lineCount">1 line</span></div>
+        <textarea id="pythonCode" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Python code editor" wrap="off"># Welcome to SARVESHTWR Python Practice Lab
+name = input("Enter your name: ")
+print("Hello,", name)
+print("Welcome to Python programming!")</textarea>
+        <div class="python-editor-foot"><span>Tip: Press Tab to indent your code.</span><span>Python</span></div>
+      </section>
+
+      <section class="python-panel output-panel">
+        <div class="python-panel-heading">
+          <div><span class="python-panel-icon output-symbol">▣</span><span><b>Output Console</b><small>Your program output appears here</small></span></div>
+          <div class="python-output-actions"><span class="python-tag output-tag">CONSOLE</span><button class="py-icon-btn" id="clearOutputBtn" title="Clear output" aria-label="Clear output">⌫</button></div>
+        </div>
+        <div class="console-top"><span><i></i><i></i><i></i></span><b>Terminal</b><small id="executionStatus">Ready</small></div>
+        <div id="pythonOutput" class="python-output" role="log" aria-live="polite"><span class="console-welcome">Welcome! Click <b>Run Python</b> to execute your program.</span></div>
+        <div class="python-output-foot"><span><i></i> Runs locally in your browser</span><span id="executionTime">—</span></div>
+      </section>
+    </div>
+
+    <section class="python-examples" id="examplesPanel" hidden>
+      <div class="examples-heading"><div><b>Practice Examples</b><small>Choose a program to load it into the editor</small></div><button type="button" class="py-icon-btn" id="closeExamplesBtn" aria-label="Close examples">×</button></div>
+      <div class="example-grid">
+        <button class="example-card" data-example="hello"><b>01 · Hello World</b><span>Print your first message</span></button>
+        <button class="example-card" data-example="variables"><b>02 · Variables</b><span>Store and display values</span></button>
+        <button class="example-card" data-example="calculator"><b>03 · Simple Calculator</b><span>Perform basic arithmetic</span></button>
+        <button class="example-card" data-example="ifelse"><b>04 · If–Else</b><span>Check even or odd numbers</span></button>
+        <button class="example-card" data-example="loop"><b>05 · For Loop</b><span>Display a multiplication table</span></button>
+        <button class="example-card" data-example="function"><b>06 · Functions</b><span>Create and call a function</span></button>
+        <button class="example-card" data-example="list"><b>07 · Lists</b><span>Work with list elements</span></button>
+        <button class="example-card" data-example="string"><b>08 · Strings</b><span>Explore string operations</span></button>
+      </div>
+    </section>
+
+    <section class="python-snapshot">
+      <div class="snapshot-heading">
+        <div><span class="python-section-kicker">SAVE YOUR PRACTICAL</span><h2>Download a Snapshot</h2><p>Choose the sections you want to include in one PNG image.</p></div>
+        <span class="snapshot-image-icon">PNG</span>
+      </div>
+      <div class="snapshot-select-row">
+        <label class="py-snapshot-option"><input type="checkbox" id="shotCode" checked><span class="py-check">✓</span><span><b>Python Code</b><small>Your program</small></span></label>
+        <label class="py-snapshot-option"><input type="checkbox" id="shotOutput" checked><span class="py-check">✓</span><span><b>Output</b><small>Program result</small></span></label>
+      </div>
+      <div class="snapshot-bottom">
+        <div><b id="snapshotSelectedNames">Selected: Python Code + Output</b><small id="snapshotSelectionCount">2 items selected · Combined into one image</small></div>
+        <button class="py-btn py-btn-primary" id="downloadSnapshotBtn" type="button">↓ Download Selected Snapshot</button>
+      </div>
+      <p class="python-privacy">🔒 Your code and output stay in your browser. They are not uploaded to the portal.</p>
+    </section>
+
+    <div class="python-tip"><span>✦</span><div><b>Practice tip</b><p>Try changing the sample programs, experiment with different inputs and run your code again. Learning Python becomes easier by practising every day.</p></div></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand footer-brand" href="index.html"><img src="assets/logo.svg" alt="" width="36" height="36"><span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span></a>
+    <p>© <span id="year"></span> SARVESHTWR.IN · Learn something every day.</p>
+  </div>
+</footer>
+<div id="pythonToast" class="python-toast" role="status" aria-live="polite"></div>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="js/python-lab.js"></script>
+</body>
+</html>

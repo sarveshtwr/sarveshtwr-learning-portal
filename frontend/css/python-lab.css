@@ -1,0 +1,109 @@
+/* SARVESHTWR PYTHON PRACTICE LAB — White + Blue */
+.python-lab-page{background:#f7f9fc;min-height:100vh;color:#17243a}
+.python-container{width:min(1400px,calc(100% - 48px));margin-inline:auto}
+.python-hero{padding:54px 0 42px;background:radial-gradient(ellipse at 82% 25%,#dceaff 0,transparent 32%),linear-gradient(120deg,#f8fbff,#eef4ff 65%,#fff)}
+.python-kicker,.python-section-kicker{color:#1767d2;font-size:10px;font-weight:900;letter-spacing:.15em}
+.python-hero-row{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.python-hero h1{margin:12px 0 10px;font:800 clamp(38px,5vw,58px)/1.1 Manrope,sans-serif;letter-spacing:-.055em;color:#101827}
+.python-hero h1 span{color:#2563eb}
+.python-hero p{max-width:700px;margin:0;color:#64748b;font-size:15px;line-height:1.8}
+.python-pills{display:flex;flex-wrap:wrap;gap:9px;margin-top:21px}
+.python-pills span{padding:8px 12px;border:1px solid #dbe7fa;border-radius:99px;background:#ffffffc9;color:#31527f;font-size:11px;font-weight:800}
+.python-logo-mark{width:150px;height:140px;flex:0 0 150px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #d8e7fb;border-radius:25px;background:linear-gradient(145deg,#fff,#edf5ff);box-shadow:0 15px 35px #2563eb12;color:#1767d2}
+.python-logo-mark span{font:900 47px/1 Manrope,sans-serif;letter-spacing:-.08em}
+.python-logo-mark b{margin-top:6px;font:800 13px Manrope,sans-serif;color:#243b5a}
+.python-logo-mark small{margin-top:6px;color:#8296b3;font-size:7px;font-weight:900;letter-spacing:.16em}
+.python-workspace{padding-top:28px;padding-bottom:75px}
+.python-reminder{display:flex;align-items:center;gap:16px;margin-bottom:18px;padding:17px 20px;border:1px solid #d8e8fb;border-left:5px solid #0875f5;border-radius:15px;background:linear-gradient(105deg,#fff,#f3f8ff 60%,#e7f2ff);box-shadow:0 8px 24px #1952960b}
+.python-reminder-number{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border:1px solid #cfe2fb;border-radius:12px;background:#edf5ff;color:#0868df;font:800 14px Manrope}
+.python-reminder-copy{flex:1;min-width:0}
+.python-reminder-copy>div{margin-bottom:5px;color:#0868df;font-size:8px;font-weight:900;letter-spacing:.15em}
+.python-reminder-copy strong{display:block;color:#14243b;font:800 15px Manrope}
+.python-reminder-copy strong span{color:#0868df}
+.python-reminder-copy p{margin:5px 0 0;color:#61738d;font-size:11px}
+.python-reminder-copy p b{padding:1px 6px;border:1px solid #c9defa;border-radius:5px;background:#fff;color:#0868df}
+.python-clear-reminder{min-height:41px;padding:0 18px;border:1px solid #0868df;border-radius:9px;background:#0868df;color:#fff;font-size:12px;font-weight:800;white-space:nowrap;cursor:pointer}
+.python-clear-reminder:hover,.py-btn-primary:hover{background:#075ac0}
+.python-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:16px;padding:15px 17px;border:1px solid #e3eaf3;border-radius:14px;background:#fff;box-shadow:0 5px 18px #0f172a08}
+.python-workspace-title{display:flex;align-items:center;gap:10px}
+.python-workspace-title>i,.editor-live-dot,.python-output-foot i{width:9px;height:9px;border-radius:50%;background:#16a36a;box-shadow:0 0 0 4px #16a36a18}
+.python-workspace-title span{display:flex;flex-direction:column;gap:3px}
+.python-workspace-title b{font-size:13px;color:#172a45}
+.python-workspace-title small{font-size:10px;color:#8492a6}
+.python-actions{display:flex;flex-wrap:wrap;gap:8px}
+.py-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:0 13px;border:1px solid #dce5f0;border-radius:8px;font-size:11px;font-weight:800;cursor:pointer;transition:.18s}
+.py-btn-light{background:#fff;color:#405570}
+.py-btn-light:hover{border-color:#9fc5fa;background:#f5f9ff;color:#0868df}
+.py-btn-primary{border-color:#0868df;background:#0868df;color:#fff;box-shadow:0 6px 14px #0868df22}
+.py-btn:disabled{opacity:.5;cursor:not-allowed}
+.python-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;align-items:stretch}
+.python-panel{min-width:0;overflow:hidden;border:1px solid #e0e8f2;border-radius:16px;background:#fff;box-shadow:0 8px 25px #0f172a08}
+.python-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;border-bottom:1px solid #edf1f6}
+.python-panel-heading>div:first-child{display:flex;align-items:center;gap:10px}
+.python-panel-heading>div:first-child>span:last-child{display:flex;flex-direction:column;gap:3px}
+.python-panel-heading b{color:#172a45;font:800 13px Manrope}
+.python-panel-heading small{color:#8492a6;font-size:10px}
+.python-panel-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:9px;background:#eaf3ff;color:#0868df;font:900 13px Consolas}
+.output-symbol{background:#eaf8f1;color:#15945d}
+.python-tag{padding:6px 9px;border:1px solid #dce9fb;border-radius:6px;background:#f2f7ff;color:#1767d2;font-size:8px;font-weight:900;letter-spacing:.1em}
+.output-tag{border-color:#d9efe4;background:#f0faf5;color:#168653}
+.python-editor-meta{display:flex;justify-content:space-between;padding:9px 14px;background:#f8faff;color:#8392a7;font-size:9px;font-weight:800;letter-spacing:.06em}
+.python-editor-meta>span:first-child{display:flex;align-items:center;gap:7px}
+.editor-live-dot{width:7px;height:7px;box-shadow:none}
+#pythonCode{display:block;width:100%;height:390px;resize:vertical;padding:18px 20px;border:0;outline:0;background:#fbfdff;color:#1e3554;font:13px/1.75 Consolas,"Courier New",monospace;tab-size:4;white-space:pre;overflow:auto}
+#pythonCode:focus{box-shadow:inset 0 0 0 2px #dceaff}
+.python-editor-foot,.python-output-foot{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-top:1px solid #edf1f6;color:#8a98aa;font-size:9px}
+.python-output-actions{display:flex;align-items:center;gap:8px}
+.py-icon-btn{width:30px;height:30px;display:grid;place-items:center;border:1px solid #e1e9f3;border-radius:8px;background:#fff;color:#61738d;font-size:17px;cursor:pointer}
+.py-icon-btn:hover{border-color:#9fc5fa;color:#0868df}
+.console-top{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid #edf1f6;background:#fbfcfe}
+.console-top>span{display:flex;gap:4px}
+.console-top>span i{width:7px;height:7px;border-radius:50%;background:#cbd5e1}
+.console-top>span i:first-child{background:#fb7185}.console-top>span i:nth-child(2){background:#fbbf24}.console-top>span i:nth-child(3){background:#34d399}
+.console-top b{color:#52647d;font:700 10px Consolas,monospace}
+.console-top small{margin-left:auto;color:#8292a8;font-size:9px}
+.python-output{height:390px;overflow:auto;padding:18px 19px;background:#fcfdff;color:#1d3554;font:13px/1.75 Consolas,"Courier New",monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+.console-welcome{color:#8292a8}
+.python-output .output-error{color:#dc4545}
+.python-output .output-prompt{color:#1767d2}
+.python-output-foot{align-items:center}
+.python-output-foot span:first-child{display:flex;align-items:center;gap:7px}
+.python-output-foot i{width:7px;height:7px;box-shadow:none}
+.python-examples{margin-top:17px;padding:18px;border:1px solid #dfe9f6;border-radius:15px;background:#fff;box-shadow:0 7px 20px #0f172a08}
+.examples-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
+.examples-heading>div{display:flex;flex-direction:column;gap:4px}
+.examples-heading b{font:800 14px Manrope;color:#172a45}
+.examples-heading small{font-size:10px;color:#8292a8}
+.example-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.example-card{display:flex;flex-direction:column;gap:6px;align-items:flex-start;padding:13px;border:1px solid #e1eaf5;border-radius:10px;background:#fbfdff;text-align:left;cursor:pointer}
+.example-card:hover{border-color:#91bdf5;background:#f0f6ff}
+.example-card b{font-size:11px;color:#1767d2}
+.example-card span{font-size:9px;color:#7c8da4}
+.python-snapshot{margin-top:25px;padding:22px;border:1px solid #e0eaf7;border-radius:17px;background:#fff;box-shadow:0 9px 26px #0f172a08}
+.snapshot-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}
+.snapshot-heading h2{margin:6px 0 4px;color:#172a45;font:800 19px Manrope}
+.snapshot-heading p{margin:0;color:#8292a8;font-size:11px}
+.snapshot-image-icon{width:44px;height:44px;display:grid;place-items:center;border:1px solid #d6e7fc;border-radius:12px;background:#eff6ff;color:#1767d2;font:900 11px Manrope}
+.snapshot-select-row{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.py-snapshot-option{display:flex;align-items:center;gap:11px;min-height:67px;padding:12px;border:1px solid #dfe7f2;border-radius:11px;background:#fff;cursor:pointer}
+.py-snapshot-option:has(input:checked){border-color:#2380ed;background:#f0f6ff}
+.py-snapshot-option input{position:absolute;opacity:0;pointer-events:none}
+.py-check{width:21px;height:21px;display:grid;place-items:center;border:1.5px solid #aab8ca;border-radius:6px;color:transparent;font-size:12px}
+.py-snapshot-option:has(input:checked) .py-check{border-color:#0868df;background:#0868df;color:#fff}
+.py-snapshot-option>span:last-child{display:flex;flex-direction:column;gap:4px}
+.py-snapshot-option b{font-size:12px;color:#243b59}
+.py-snapshot-option small{font-size:9px;color:#8292a8}
+.snapshot-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:17px;padding-top:16px;border-top:1px solid #edf1f6}
+.snapshot-bottom>div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.snapshot-bottom b{color:#1767d2;font-size:11px}
+.snapshot-bottom small{color:#8292a8;font-size:9px}
+.python-privacy{margin:13px 0 0;color:#8795a8;font-size:9px}
+.python-tip{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:16px;border:1px solid #dce9fa;border-radius:13px;background:#f2f7ff}
+.python-tip>span{color:#1767d2;font-size:20px}
+.python-tip b{font:800 12px Manrope;color:#244061}
+.python-tip p{margin:4px 0 0;color:#667b98;font-size:10px;line-height:1.7}
+.python-toast{position:fixed;z-index:99;left:50%;bottom:25px;transform:translate(-50%,20px);padding:11px 17px;border-radius:9px;background:#172a45;color:#fff;font-size:11px;opacity:0;pointer-events:none;transition:.2s;box-shadow:0 8px 25px #0f172a30}
+.python-toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){.python-grid{grid-template-columns:1fr}.python-panel #pythonCode,.python-output{height:330px}.example-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.python-container{width:min(100% - 28px,1400px)}.python-hero{padding:40px 0 30px}.python-logo-mark{width:95px;height:95px;flex-basis:95px;border-radius:18px}.python-logo-mark span{font-size:32px}.python-logo-mark b{font-size:10px}.python-logo-mark small{font-size:6px}.python-hero p{font-size:13px}.python-reminder{flex-wrap:wrap;padding:13px;gap:10px}.python-reminder-number{width:36px;height:36px;flex-basis:36px}.python-reminder-copy{flex:1 1 calc(100% - 50px)}.python-reminder-copy strong{font-size:12px}.python-reminder-copy p{font-size:10px}.python-clear-reminder{margin-left:46px;min-height:35px}.python-toolbar{align-items:flex-start;flex-direction:column}.python-actions{width:100%}.python-actions .py-btn{flex:1}.python-snapshot{padding:15px}.snapshot-bottom{align-items:stretch;flex-direction:column}.snapshot-bottom .py-btn{width:100%}}
+@media(max-width:430px){.python-hero-row{align-items:flex-start}.python-logo-mark{display:none}.python-pills span{font-size:9px}.python-actions .py-btn{font-size:9px;padding:0 8px}.example-grid{grid-template-columns:1fr 1fr}.python-panel-heading{padding:12px}.python-output{height:280px}#pythonCode{height:280px}.snapshot-heading h2{font-size:16px}}

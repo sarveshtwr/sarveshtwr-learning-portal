@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Practise HTML, CSS and JavaScript with live output in SARVESHTWR HTML Practice Lab.">
+  <title>HTML Practice Lab — SARVESHTWR</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/html-lab.css">
+</head>
+<body class="html-lab-page">
+<header class="site-header">
+  <nav class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="42" height="42">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#classes">Classes</a>
+      <a href="library.html">Study Library</a>
+      <a href="html-lab.html" class="active">HTML Practice Lab</a>
+      <a href="python-lab.html">Python Practice Lab</a>
+      <a href="about.html">About</a>
+      <a class="admin-link" href="admin.html">Admin Login ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main class="lab-main">
+  <section class="lab-hero">
+    <div class="lab-container">
+      <span class="section-kicker">LEARN BY DOING</span>
+      <h1>HTML Practice <span>Lab.</span></h1>
+      <p>Write HTML, style it with CSS, add interactivity with JavaScript and see your result instantly.</p>
+      <div class="lab-feature-pills"><span>● Live Preview</span><span>● Three Editors</span><span>● Download Snapshots</span></div>
+    </div>
+  </section>
+
+  <section class="lab-container lab-workspace">
+    <div class="clear-reminder" role="note" aria-label="Important instruction">
+      <div class="clear-reminder-number">01</div>
+      <div class="clear-reminder-content">
+        <div class="clear-reminder-eyebrow">ONE QUICK STEP BEFORE YOU START</div>
+        <strong>New practical? Start with a <span>clean workspace.</span></strong>
+        <p>Click <b class="clear-all-highlight">Clear All</b> first to remove your previous HTML, CSS and JavaScript code.</p>
+      </div>
+      <div class="clear-reminder-side">
+        <button type="button" class="reminder-clear-btn" id="reminderClearBtn" aria-label="Clear all code editors">
+          <span aria-hidden="true">↻</span> Clear All
+        </button>
+      </div>
+    </div>
+    <div class="lab-toolbar">
+      <div><span class="lab-live-dot"></span><strong>Workspace</strong><small>Changes run only when you press Run Code</small></div>
+      <div class="lab-actions">
+        <button class="lab-btn lab-btn-light" id="resetBtn">↺ Reset Example</button>
+        <button class="lab-btn lab-btn-light" id="clearBtn">Clear All</button>
+        <button class="lab-btn lab-btn-primary" id="runBtn">▶ Run Code</button>
+      </div>
+    </div>
+
+    <div class="lab-grid">
+      <section class="lab-panel code-panel" id="codePanel">
+        <div class="panel-heading">
+          <div><span class="panel-icon">&lt;/&gt;</span><div><h2>Code Editor</h2><p>Write and edit your code</p></div></div>
+          <span class="panel-tag">EDITOR</span>
+        </div>
+        <div class="editor-tabs" role="tablist" aria-label="Code language">
+          <button class="editor-tab active" data-editor="html" role="tab" aria-selected="true">HTML</button>
+          <button class="editor-tab" data-editor="css" role="tab" aria-selected="false">CSS</button>
+          <button class="editor-tab" data-editor="js" role="tab" aria-selected="false">JavaScript</button>
+        </div>
+        <div class="editor-label"><span id="editorFileName">index.html</span><span id="lineCount">1 line</span></div>
+        <textarea id="htmlCode" class="code-input active" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="HTML code editor"></textarea>
+        <textarea id="cssCode" class="code-input" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="CSS code editor"></textarea>
+        <textarea id="jsCode" class="code-input" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="JavaScript code editor"></textarea>
+        <div class="editor-foot"><span>Tip: Use indentation to keep your code readable.</span><span>HTML · CSS · JS</span></div>
+      </section>
+
+      <section class="lab-panel output-panel" id="outputPanel">
+        <div class="panel-heading">
+          <div><span class="panel-icon output-icon">▣</span><div><h2>Live Output</h2><p>Your webpage preview appears here</p></div></div>
+          <div class="output-heading-actions"><span class="panel-tag output-tag">PREVIEW</span><button class="mini-icon-btn" id="fullscreenBtn" title="Full screen output" aria-label="Full screen output">⛶</button></div>
+        </div>
+        <div class="preview-browser"><div class="browser-dots"><i></i><i></i><i></i></div><span>Student Preview</span><span class="preview-status">Ready</span></div>
+        <iframe id="previewFrame" title="HTML code output" sandbox="allow-scripts" referrerpolicy="no-referrer"></iframe>
+        <div class="output-foot"><span><i></i> Isolated student preview</span><span id="runStatus">Ready to run</span></div>
+      </section>
+    </div>
+
+    <section class="snapshot-section">
+      <div class="snapshot-picker">
+        <div class="snapshot-picker-top">
+          <div class="snapshot-title-wrap"><span class="snapshot-camera" aria-hidden="true">▣</span><div><b>Choose what to include in your snapshot</b><small>Select any combination of code and output</small></div></div>
+          <span class="snapshot-selection-badge"><i></i><span id="snapshotSelectionCount">4 items selected</span></span>
+        </div>
+        <div class="snapshot-options">
+          <label class="snapshot-option html-option"><input type="checkbox" id="shotHtml" checked><span class="option-mark">&lt;/&gt;</span><span class="option-copy"><b>HTML Code</b><small>Page structure</small></span><span class="option-check">✓</span></label>
+          <label class="snapshot-option css-option"><input type="checkbox" id="shotCss" checked><span class="option-mark css-mark">✳</span><span class="option-copy"><b>CSS Code</b><small>Design &amp; styling</small></span><span class="option-check">✓</span></label>
+          <label class="snapshot-option js-option"><input type="checkbox" id="shotJs" checked><span class="option-mark js-mark">JS</span><span class="option-copy"><b>JavaScript Code</b><small>Logic &amp; actions</small></span><span class="option-check">✓</span></label>
+          <label class="snapshot-option output-option"><input type="checkbox" id="shotOutput" checked><span class="option-mark output-mark">▣</span><span class="option-copy"><b>Output</b><small>Rendered webpage</small></span><span class="option-check">✓</span></label>
+        </div>
+        <div class="snapshot-picker-footer">
+          <div class="snapshot-footer-hint"><span class="snapshot-footer-icon">✓</span><span><b>Selected: <strong id="snapshotSelectedNames">HTML Code + CSS Code + JavaScript Code + Output</strong></b><small>Your selected sections will be combined into one image.</small></span></div>
+          <button class="lab-btn lab-btn-primary" id="downloadSelectedBtn"><span>↓</span> Download Selected Snapshot</button>
+        </div>
+      </div>
+      <p class="snapshot-note"><span>🔒</span> Your code stays in your browser. Nothing is uploaded to the portal.</p>
+    </section>
+
+    <section class="lab-tips">
+      <div><span class="tips-icon">✦</span><div><b>Practice tip</b><p>Start with a heading and paragraph in HTML, change their appearance in CSS, then use JavaScript to make a button interactive.</p></div></div>
+      <button class="lab-btn lab-btn-light" id="sampleBtn">Load Sample Program</button>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand footer-brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="36" height="36">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <p>© <span id="year"></span> SARVESHTWR.IN · Learn something every day.</p>
+  </div>
+</footer>
+<div id="labToast" class="lab-toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="js/html-lab.js"></script>
+</body>
+</html>

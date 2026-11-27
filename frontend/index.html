@@ -24,32 +24,22 @@
 
   <body>
     <header class="site-header">
-      <nav class="nav-wrap">
-        <a class="brand" href="index.html">
-          <img src="assets/logo.svg" alt="" width="42" height="42" />
-          <span>
-            <b>SARVESHTWR</b>
-            <small>STUDENT LEARNING PORTAL</small>
-          </span>
-        </a>
-
-        <button
-          class="mobile-menu-btn"
-          id="menuToggle"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
-
-        <div class="nav-links" id="navLinks">
-          <a href="#classes">Classes</a>
-          <a href="#library">Study Library</a>
-          <a href="about.html">About</a>
-          <a class="admin-link" href="admin.html">Admin Login ↗</a>
-        </div>
-      </nav>
-    </header>
+  <nav class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="42" height="42">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#classes" class="active">Classes</a>
+      <a href="library.html">Study Library</a>
+      <a href="html-lab.html">HTML Practice Lab</a>
+      <a href="python-lab.html">Python Practice Lab</a>
+      <a href="about.html">About</a>
+      <a class="admin-link" href="admin.html">Admin Login ↗</a>
+    </div>
+  </nav>
+</header>
 
     <main>
       <section class="hero">
@@ -71,7 +61,7 @@
               <a class="btn btn-primary" href="#classes">
                 Explore study material <span>→</span>
               </a>
-              <a class="btn btn-light" href="#library"> Browse latest notes </a>
+              <a class="btn btn-light" href="library.html"> Browse latest notes </a>
             </div>
 
             <div class="hero-stats">
@@ -128,14 +118,14 @@
         </div>
 
         <div class="class-grid">
-          <a class="class-tile tile-nine" href="#library" data-class-link="9">
+          <a class="class-tile tile-nine" href="library.html?class=9">
             <span class="tile-number">09</span>
             <span class="tile-title">Class 9</span>
             <span class="tile-sub">Build your foundations</span>
             <span class="tile-arrow">Explore ↗</span>
           </a>
 
-          <a class="class-tile tile-ten" href="#library" data-class-link="10">
+          <a class="class-tile tile-ten" href="library.html?class=10">
             <span class="tile-number">10</span>
             <span class="tile-title">Class 10</span>
             <span class="tile-sub">Learn with confidence</span>
@@ -144,7 +134,7 @@
 
           <a
             class="class-tile tile-eleven"
-            href="#library"
+            href="library.html?class=11"
             data-class-link="11"
           >
             <span class="tile-number">11</span>
@@ -155,7 +145,7 @@
 
           <a
             class="class-tile tile-twelve"
-            href="#library"
+            href="library.html?class=12"
             data-class-link="12"
           >
             <span class="tile-number">12</span>
@@ -163,52 +153,6 @@
             <span class="tile-sub">Prepare for what’s next</span>
             <span class="tile-arrow">Explore ↗</span>
           </a>
-        </div>
-      </section>
-
-      <section class="library-section" id="library">
-        <div class="container section">
-          <div class="section-heading">
-            <div>
-              <span class="section-kicker">STUDY LIBRARY</span>
-              <h2>Explore learning resources</h2>
-              <p>
-                Search by topic, subject or chapter. Open a chapter in normal or
-                reading mode.
-              </p>
-            </div>
-            <span class="live-label"><i></i> Updated by admin</span>
-          </div>
-
-          <div class="filters">
-            <label class="search-box">
-              <span>⌕</span>
-              <input
-                id="searchInput"
-                type="search"
-                placeholder="Search notes, subject or chapter…"
-                aria-label="Search study resources"
-              />
-            </label>
-
-            <select id="classFilter" aria-label="Filter by class">
-              <option value="">All classes</option>
-              <option value="9">Class 9</option>
-              <option value="10">Class 10</option>
-              <option value="11">Class 11</option>
-              <option value="12">Class 12</option>
-            </select>
-
-            <select id="subjectFilter" aria-label="Filter by subject">
-              <option value="">All subjects</option>
-            </select>
-          </div>
-
-          <div id="chapterGrid" class="chapter-grid">
-            <div class="empty-state">Loading study material…</div>
-          </div>
-
-          <p id="resultCount" class="result-count"></p>
         </div>
       </section>
 

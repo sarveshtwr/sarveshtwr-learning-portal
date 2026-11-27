@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <meta
+      name="description"
+      content="SARVESHTWR Student Learning Portal — chapter-wise notes and learning resources."
+    />
+    <title>SARVESHTWR — Student Learning Portal</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+  <nav class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.svg" alt="" width="42" height="42">
+      <span><b>SARVESHTWR</b><small>STUDENT LEARNING PORTAL</small></span>
+    </a>
+    <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html#classes" class="active">Classes</a>
+      <a href="library.html">Study Library</a>
+      <a href="html-lab.html">HTML Practice Lab</a>
+      <a href="python-lab.html">Python Practice Lab</a>
+      <a href="about.html">About</a>
+      <a class="admin-link" href="admin.html">Admin Login ↗</a>
+    </div>
+  </nav>
+</header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow"> <i></i> LEARN • PRACTISE • PROGRESS </span>
+
+            <h1>
+              Make learning<br />
+              <span>clearer & smarter.</span>
+            </h1>
+
+            <p>
+              Class-wise notes, chapter explanations and useful learning
+              resources — organised in one simple place for every screen.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#classes">
+                Explore study material <span>→</span>
+              </a>
+              <a class="btn btn-light" href="#library"> Browse latest notes </a>
+            </div>
+
+            <div class="hero-stats">
+              <div><b>4</b><small>Classes</small></div>
+              <div><b>24/7</b><small>Learning access</small></div>
+              <div><b>01</b><small>Learning space</small></div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-label="Illustration of books and learning">
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+
+            <div class="art-card">
+              <div class="art-card-top">
+                <span>YOUR LEARNING SPACE</span>
+                <span class="spark">✦</span>
+              </div>
+
+              <div class="book-stack">
+                <div class="book book-blue">
+                  <span>COMPUTER SCIENCE</span>
+                </div>
+                <div class="book book-purple">
+                  <span>ARTIFICIAL INTELLIGENCE</span>
+                </div>
+                <div class="book book-yellow">
+                  <span>LEARN SOMETHING NEW</span>
+                </div>
+              </div>
+
+              <div class="art-bottom">
+                <span class="art-check">✓</span>
+                <span>
+                  <b>One topic at a time</b>
+                  <small>Keep moving forward</small>
+                </span>
+              </div>
+            </div>
+
+            <div class="floating-note">✦ Keep learning</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="classes">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">CHOOSE YOUR CLASS</span>
+            <h2>Where would you like to start?</h2>
+            <p>Choose your class to find relevant subjects and chapters.</p>
+          </div>
+          <span class="section-pill">Classes 9–12</span>
+        </div>
+
+        <div class="class-grid">
+          <a class="class-tile tile-nine" href="#library" data-class-link="9">
+            <span class="tile-number">09</span>
+            <span class="tile-title">Class 9</span>
+            <span class="tile-sub">Build your foundations</span>
+            <span class="tile-arrow">Explore ↗</span>
+          </a>
+
+          <a class="class-tile tile-ten" href="#library" data-class-link="10">
+            <span class="tile-number">10</span>
+            <span class="tile-title">Class 10</span>
+            <span class="tile-sub">Learn with confidence</span>
+            <span class="tile-arrow">Explore ↗</span>
+          </a>
+
+          <a
+            class="class-tile tile-eleven"
+            href="#library"
+            data-class-link="11"
+          >
+            <span class="tile-number">11</span>
+            <span class="tile-title">Class 11</span>
+            <span class="tile-sub">Go deeper into concepts</span>
+            <span class="tile-arrow">Explore ↗</span>
+          </a>
+
+          <a
+            class="class-tile tile-twelve"
+            href="#library"
+            data-class-link="12"
+          >
+            <span class="tile-number">12</span>
+            <span class="tile-title">Class 12</span>
+            <span class="tile-sub">Prepare for what’s next</span>
+            <span class="tile-arrow">Explore ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="library-section" id="library">
+        <div class="container section">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">STUDY LIBRARY</span>
+              <h2>Explore learning resources</h2>
+              <p>
+                Search by topic, subject or chapter. Open a chapter in normal or
+                reading mode.
+              </p>
+            </div>
+            <span class="live-label"><i></i> Updated by admin</span>
+          </div>
+
+          <div class="filters">
+            <label class="search-box">
+              <span>⌕</span>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search notes, subject or chapter…"
+                aria-label="Search study resources"
+              />
+            </label>
+
+            <select id="classFilter" aria-label="Filter by class">
+              <option value="">All classes</option>
+              <option value="9">Class 9</option>
+              <option value="10">Class 10</option>
+              <option value="11">Class 11</option>
+              <option value="12">Class 12</option>
+            </select>
+
+            <select id="subjectFilter" aria-label="Filter by subject">
+              <option value="">All subjects</option>
+            </select>
+          </div>
+
+          <div id="chapterGrid" class="chapter-grid">
+            <div class="empty-state">Loading study material…</div>
+          </div>
+
+          <p id="resultCount" class="result-count"></p>
+        </div>
+      </section>
+
+      <section class="section container about-section" id="about">
+        <div class="about-card">
+          <div>
+            <span class="section-kicker">A BETTER WAY TO STUDY</span>
+            <h2>Good learning starts<br />with clear concepts.</h2>
+            <p>
+              A focused digital learning space for students to read, revise and
+              practise at their own pace.
+            </p>
+          </div>
+
+          <div class="about-points">
+            <div>
+              <span>01</span>
+              <b>Organised by class & subject</b>
+            </div>
+            <div>
+              <span>02</span>
+              <b>Comfortable reading experience</b>
+            </div>
+            <div>
+              <span>03</span>
+              <b>Works across screen sizes</b>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="brand footer-brand" href="#">
+          <img src="assets/logo.svg" alt="" width="36" height="36" />
+          <span>
+            <b>SARVESHTWR</b>
+            <small>STUDENT LEARNING PORTAL</small>
+          </span>
+        </a>
+
+        <p>
+          © <span id="year"></span> SARVESHTWR.IN · Learn something every day.
+        </p>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
